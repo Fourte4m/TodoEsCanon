@@ -1,0 +1,267 @@
+body {
+  padding-top: 60px;
+}
+
+body {
+  margin: 0;
+  padding-top: 60px;
+  min-height: 100vh;
+  background-color: white;
+}
+
+/* COLUMNA IZQUIERDA */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100%;
+
+  background-image: url("img/logo_gif.gif");
+  background-repeat: repeat-y; 
+  background-size: 300px 180px;
+
+  z-index: 0;
+}
+
+/* COLUMNA DERECHA */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15%;
+  height: 100%;
+
+  background-image: url("img/logo_gif.gif");
+  background-repeat: repeat-y;
+  background-size: 300px 180px;
+
+  z-index: 0;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 18%;
+  height: 100%;
+
+  background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.726)),
+  url("img/logo_gif.gif");
+  background-repeat: repeat-y;
+  background-size: 300px 180px;
+
+  z-index: 0;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 30%,
+    black 70%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 10%,
+    black 30%,
+    transparent 100%
+  );
+}
+
+/* CONTENIDO DEL MEDIO/EL CUERPO DIGAMOS */
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+
+  body {
+    background-size: 90px 0px;
+  }
+  .container-ajustado {
+    max-width: 69%;
+     margin-left: auto;
+    margin-right: auto;
+  }
+  body::before,
+  body::after {
+    width: 21%;
+    background-size: 90px 60px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 100px;
+}
+
+/* NAVBAR */
+.custom-navbar {
+  background-color: #b00000;
+  padding: 8px 20px;
+}
+
+.custom-navbar .nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.custom-navbar .nav-link:hover {
+  opacity: 0.75;
+}
+
+.search-box input {
+  border-radius: 50px;
+  padding-left: 30px;
+  height: 32px;
+  border: none;
+}
+
+.search-box input::placeholder {
+  font-size: 14px;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background-color: white;
+  margin: 0 10px;
+  opacity: 0.7;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box::before {
+  content: "🔍";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+@media (max-width: 991.98px) {
+  .divider {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .texto-inicio {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+}
+
+/* PRESENTACIÓN PORTADA */
+
+.imagen-portada {
+  width: 100%;
+  border-radius: 30px; 
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.imagen-portada:hover {
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0);
+  transform: scale(1.02);
+}
+
+/* EQUIPO */
+
+.img{
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.card {
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 12px 25px rgba(0,0,0,0.25);
+}
+
+.card-img-top {
+  border-radius: 20px 20px 0 0;
+}
+
+@media(max-width: 700px) {
+  .img{
+    height: 320px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+  .equipo{
+  display: block;
+  margin: auto;
+  padding-left:auto;
+}
+  
+}
+/* ULTIMO PROGRAMA */
+
+.yt {
+  display: block;
+  width: auto;
+}
+
+.tamaños {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  
+  border: 4px solid #B70F0A;
+  border-radius: 10px;    
+}
+
+@media (max-width: 700px) {
+  .tamaños {
+    max-width: 480px;
+  }
+}
+
+/* BACK */
+
+.carousel-sombra {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  padding: 10px;
+}
+
+footer {
+    margin-bottom:-49px !important;
+}
+
+body {
+  overflow-x: hidden;
+  padding-top: 60px;
+}
